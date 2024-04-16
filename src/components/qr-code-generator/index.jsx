@@ -7,15 +7,17 @@ export default function QRCodeGenerator() {
 
     function handleGenerateQrCode() {
         setQrCOde(input);
+        setInput('');
     }
   return (
     <div>
  
       <h1>QR Code Generator</h1>
-      {/* <div>
+      <div>
         <input onChange={(e) => setInput(e.target.value)} 
         type="text" 
         name="qr-code" 
+        value={input}
         placeholder="Enter your value here" />
 
         <button 
@@ -26,7 +28,7 @@ export default function QRCodeGenerator() {
       </div>
       <div>
         <QRCode id="qr-code-value" value={qrCode} bgColor="#fff" />
-      </div> */}
+      </div>
     </div>
   );
 }
